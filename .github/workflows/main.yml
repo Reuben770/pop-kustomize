@@ -1,0 +1,14 @@
+name: Deploy demo
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Listado de Archivos último commit 
+        run: |
+              git show   $GITHUB_SHA 
